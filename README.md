@@ -1,13 +1,6 @@
 # CrewAI Minimum Project using Local Models with Ollama
 This is a project with the minimum code for CrewAI using Local LLM such as Llama2 via Ollama.
 
-## Ollama using Llama2
-https://docs.crewai.com/how-to/LLM-Connections/#using-local-models-with-ollama
-
-```
-llm=LLM(model="ollama/llama2", base_url="http://localhost:11434")
-```
-
 ## Quick Start
 ### Run Ollama and the local LLM Model
 Make sure you have the Prerequisits installed and setup. The local LLM Model, Llama2, should be running on your local machine.
@@ -54,6 +47,19 @@ ollama run llama2
 You should be able to confirm by accessing http://127.0.0.1:11434/
 ```(HTTP Response)
 Ollama is running
+```
+
+## Ollama using Llama2
+The LLM model instance is created using LLM (crewai library), and the model and base_url parameters should be specified accordingly.
+(note) Reference: https://docs.crewai.com/how-to/LLM-Connections/#using-local-models-with-ollama
+
+The following is the example for Llama2:
+```
+from crewai import LLM
+
+...
+
+llm=LLM(model="ollama/llama2", base_url="http://localhost:11434")
 ```
 
 ## Application Example
