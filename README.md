@@ -11,7 +11,7 @@ You can kickoff the application by the following command:
 Python3 main.py
 ``` 
 
-## Prerequisits
+## Prerequisites
 ### Poetry
 The libraries are managed by Poetry, so if you have not yet installed it, please install it with the following command:
 ```
