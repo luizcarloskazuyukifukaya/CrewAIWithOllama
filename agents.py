@@ -1,16 +1,14 @@
 from crewai import Agent
 from crewai import LLM
 
-llm = LLM(model="gpt-4", temperature=0.7)
 from textwrap import dedent
 
-from langchain_openai import ChatOpenAI
-# from tools.search_tools import SearchTools
+# from langchain_openai import ChatOpenAI
 
 class SearchAgents:
     def __init__(self):
-        self.OpenAIGPT35 = ChatOpenAI(
-            model_name="gpt-3.5-turbo", temperature=0.7)
+        # self.OpenAIGPT35 = ChatOpenAI(
+        #     model_name="gpt-3.5-turbo", temperature=0.7)
         # self.OpenAIGPT4 = ChatOpenAI(model_name="gpt-4", temperature=0.7)
         # LOCAL OLLAMA with LLAMA2
         # [install command] ollama pull llama2
@@ -26,7 +24,6 @@ class SearchAgents:
                 f"""Expert in searching the most detailed information about the given keyword"""),
             goal=dedent(
                 f"""Get the most detailed explanation about the meaning of the keyword in the context of Internet and IT related areas"""),
-            # tools=[SearchTools.search_internet],
             verbose=True,
             # llm=self.OpenAIGPT4,
             # llm=self.OpenAIGPT35,

@@ -1,9 +1,10 @@
 [tool.poetry]
-name = "crewai-minimum"
+name = "crewai-with-ollama"
 version = "0.1.0"
-description = "A minimum project for CrewAI"
+description = "A CreAI project with Ollama local LLM"
 authors = ["Luiz Carlos Kazuyuki Fukaya <luizcarloskazuyukifukaya@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.10,<=3.13"
